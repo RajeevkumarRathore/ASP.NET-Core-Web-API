@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>    
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Handler\Dashboard\Command\**" />
+    <Compile Remove="Handler\Dashboard\Dtos\**" />
+    <Compile Remove="Handler\Handler\**" />
+    <Compile Remove="Handler\Member\Dtos\**" />
+    <Compile Remove="Handler\User\Dtos\**" />
+    <EmbeddedResource Remove="Handler\Dashboard\Command\**" />
+    <EmbeddedResource Remove="Handler\Dashboard\Dtos\**" />
+    <EmbeddedResource Remove="Handler\Handler\**" />
+    <EmbeddedResource Remove="Handler\Member\Dtos\**" />
+    <EmbeddedResource Remove="Handler\User\Dtos\**" />
+    <None Remove="Handler\Dashboard\Command\**" />
+    <None Remove="Handler\Dashboard\Dtos\**" />
+    <None Remove="Handler\Handler\**" />
+    <None Remove="Handler\Member\Dtos\**" />
+    <None Remove="Handler\User\Dtos\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj" />
+    <ProjectReference Include="..\DTO\DTO.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="FirebaseAdmin" Version="2.4.0" />
+    <PackageReference Include="Google.Apis.Auth.AspNetCore3" Version="1.55.0" />
+    <PackageReference Include="Mapster" Version="7.3.0" />
+    <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+    <PackageReference Include="Twilio" Version="6.15.2" />
+  </ItemGroup>
+
+</Project>
